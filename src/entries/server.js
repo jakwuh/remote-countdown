@@ -2,7 +2,7 @@ import WebSocket from 'ws';
 
 let countdown = 0;
 
-const wss = new WebSocket.Server({ port: 8000 });
+const wss = new WebSocket.Server({ port: 9020 });
 
 setInterval(() => {
     if (countdown > 0) {

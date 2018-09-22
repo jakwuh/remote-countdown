@@ -6,7 +6,7 @@
 <input type="number">
 <script>
     var input = document.querySelector('input');
-    var connection = new WebSocket(`ws://localhost:8000`);
+    var connection = new WebSocket(`ws://localhost:9021`);
 
     input.onchange = function () {
         if (connection.readyState === WebSocket.OPEN) {
