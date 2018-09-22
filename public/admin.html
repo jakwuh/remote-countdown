@@ -1,0 +1,18 @@
+<html>
+<head>
+    <title>Remote countdown admin</title>
+</head>
+<body>
+<input type="number">
+<script>
+    var input = document.querySelector('input');
+    var connection = new WebSocket(`ws://localhost:8000`);
+
+    input.onchange = function () {
+        if (connection.readyState === WebSocket.OPEN) {
+            connection.send(input.value);
+        }
+    }
+</script>
+</body>
+</html>
